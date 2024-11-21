@@ -2,4 +2,4 @@ prompts
  generate nodejs code to make beeb sound. i need just the code.
 input
 output
- translator.js
+ beeb.js
