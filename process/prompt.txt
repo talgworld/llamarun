@@ -1,0 +1,1 @@
+generate nodejs code to make beeb sound. i need just the code.

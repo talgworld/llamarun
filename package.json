@@ -1,0 +1,30 @@
+{
+  "name": "llamarun",
+  "version": "1.0.0",
+  "description": "multitask generator",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "test": "node main"
+  },
+  "repository": {
+    "type": "git",
+    "url": "llamarun"
+  },
+  "keywords": [
+    "phi3",
+    "ollama",
+    "ai",
+    "gam",
+    "chatgpt"
+  ],
+  "author": "Taha Gharbawi",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "ipaddr": "^0.1.0",
+    "net": "^1.0.2",
+    "ollama": "^0.5.6",
+    "vm": "^0.1.0"
+  }
+}
