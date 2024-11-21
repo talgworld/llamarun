@@ -5,6 +5,7 @@ import * as gam from './gam/operations.js';
 import * as llama from './process/llama.js';
 import * as phi from './process/phi.js';
 
+//make sure Ollama app is running
 // choose model "phi" or "llama"
 let model = phi;
 
@@ -31,8 +32,6 @@ let processPrompts = async () => {
         let prompts = gam.branch(data, 'a');
         console.log("Loading Data..")
         
-        //execCommand('start cmd /c "node process\\monitor_res.js"');
-
         for (let index = 0; index < prompts.length; index++) {
             let id = prompts[index];
             let prompt = gam.read(data, id);
@@ -58,7 +57,6 @@ let processPrompts = async () => {
                 await execCommand(`echo. > ${path.join('process', 'prompt.txt')}`); // Empty prompt.txt
                 await fs.writeFile(path.join('process', 'prompt.txt'), prompt); // Add prompt to prompt.txt
                 
-                // console.log("Started model " + modelTypeArg + ". Waiting for incoming data..");
                 await model.run(prompt); // Replace with actual call if needed
 
                 // Wait for the AI model to complete
